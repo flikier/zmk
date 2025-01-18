@@ -409,6 +409,7 @@ export default {
     "C_MUTE",
     "K_MUTE",
     "K_MUTE2",
+    "GD_MIC_MUTE",
     "C_ALTERNATE_AUDIO_INCREMENT",
     "C_BASS_BOOST",
   ],

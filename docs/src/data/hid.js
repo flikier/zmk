@@ -9,11 +9,32 @@ import {
   consumer as consumerApplication,
 } from "./hid-applications";
 
-import { key as keyPage, consumer as consumerPage } from "./hid-usage-pages";
+import { key as keyPage, consumer as consumerPage, genericDesktop as genericDesktopPage } from "./hid-usage-pages";
 
 import usage from "../hid-usage";
 
 export default [
+  {
+    names: ["A"],
+    description: "Microphone Mute",
+    context: "Keyboard",
+    clarify: false,
+    usages: [
+      {
+        application: keyboardApplication,
+        item: usage(genericDesktopPage, 0xa9),
+      },
+    ],
+    documentation: "https://usb.org/sites/default/files/hut1_4.pdf#page=35",
+    os: {
+      windows: true,
+      linux: true,
+      android: true,
+      macos: true,
+      ios: true,
+    },
+    footnotes: {},
+  },
   {
     names: ["A"],
     description: "a and A",
